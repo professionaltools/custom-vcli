@@ -41,7 +41,6 @@ module.exports = function (argv) {
             name: "vendor",
             test: /[\\/]node_modules[\\/]/,
             priority: 10,
-            // chunks: "initial",
             chunks: "all",
           },
         }

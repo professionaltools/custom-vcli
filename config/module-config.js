@@ -19,15 +19,15 @@ module.exports = function (isDev) {
         },
         {
           test: /\.s?css$/,
-          exclude:[utils.resolve('src/common/style/index.scss'),/node_modules/],
+          exclude: [utils.resolve('src/common/style/index.scss'), /node_modules/],
           use: [
             isDev ? 'vue-style-loader' :
-                {
-                  loader: MiniCssExtractPlugin.loader,
-                  options: {
-                    publicPath: '../'
-                  }
-                },
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: '../'
+                }
+              },
             {
               loader: "css-loader",
               options: {
@@ -41,9 +41,9 @@ module.exports = function (isDev) {
             'postcss-loader',
             'sass-loader'
           ]
-        },{
+        }, {
           test: /\.s?css$/,
-          include:[utils.resolve('src/common/style/index.scss'),/node_modules/],
+          include: [utils.resolve('src/common/style/index.scss'), /node_modules/],
           use: [
             isDev ? 'vue-style-loader' :
               {
@@ -66,12 +66,12 @@ module.exports = function (isDev) {
           test: /\.less$/,
           use: [
             isDev ? 'vue-style-loader' :
-                {
-                  loader: MiniCssExtractPlugin.loader,
-                  options: {
-                    publicPath: '../'
-                  }
-                },
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: '../'
+                }
+              },
             {
               loader: "css-loader",
               options: {
